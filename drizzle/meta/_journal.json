@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1777258121347,
+      "tag": "0000_sloppy_hellion",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1777289488608,
+      "tag": "0001_jazzy_wiccan",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1777290748778,
+      "tag": "0002_useful_photon",
+      "breakpoints": true
+    }
+  ]
+}

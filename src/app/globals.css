@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brand-primary: 142 100% 31%;
+    --brand-secondary: 51 100% 50%;
+    --brand-accent: 222 100% 23%;
+    --brand-surface: 60 14% 98%;
+    --brand-card: 0 0% 100%;
+    --brand-border: 60 11% 88%;
+    --brand-text: 230 12% 6%;
+    --brand-text-muted: 226 6% 39%;
+  }
+
+  .dark {
+    --brand-primary: 142 100% 38%;
+    --brand-secondary: 51 100% 65%;
+    --brand-accent: 226 67% 55%;
+    --brand-surface: 228 13% 7%;
+    --brand-card: 230 13% 12%;
+    --brand-border: 230 12% 19%;
+    --brand-text: 60 18% 96%;
+    --brand-text-muted: 222 8% 64%;
+  }
+
+  body {
+    @apply bg-brand-surface text-brand-text font-sans antialiased;
+  }
+}

@@ -1,0 +1,41 @@
+name = "bolao-copa-do-mundo9"
+compatibility_date = "2026-04-01"
+compatibility_flags = ["nodejs_compat"]
+main = "worker-entry.js"
+
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "bolao-prod"
+database_id = "7b6c4122-d9d5-4269-9773-d13b4ee5dd63"
+migrations_dir = "drizzle"
+
+[[kv_namespaces]]
+binding = "CACHE"
+id = "8927fa654af242eb8a129dea8926ba54"
+
+[[r2_buckets]]
+binding = "FILES"
+bucket_name = "bolao-files"
+
+[vars]
+APP_URL = "https://bolao.suaempresa.com.br"
+DEFAULT_LOCALE = "pt-BR"
+TIMEZONE = "America/Sao_Paulo"
+
+# Secrets — set via `wrangler secret put`:
+#   wrangler secret put SESSION_SECRET
+#   wrangler secret put RESEND_API_KEY
+#   wrangler secret put FOOTBALL_DATA_API_KEY
+#   wrangler secret put CRON_SECRET
+#   wrangler secret put SUPERADMIN_EMAIL
+
+[triggers]
+crons = [
+  "*/5 * * * *",   # sync-results during match days
+  "0 * * * *",     # reminders (hourly)
+  "0 23 * * *",    # daily recap at 23h UTC
+]
